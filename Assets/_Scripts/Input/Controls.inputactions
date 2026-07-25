@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "Controls",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "8c2711e6-3357-4a3d-8c61-b4133e73787e",
+            "actions": [
+                {
+                    "name": "Punch",
+                    "type": "Button",
+                    "id": "06108534-aef8-48df-8826-64cc6ede29c6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "2c29a67d-c86f-4fef-a7eb-4b299517cb3b",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Punch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
