@@ -11,7 +11,9 @@ public class InputManager : MonoBehaviour
     public float MinPunchForce => minPunchForce;
     public float MaxPunchForce => maxPunchForce;    
     private Controls _controls;
+    private bool canPunch = true;
     public Action<float> punch;
+    
 
     private void Awake()
     {
@@ -26,6 +28,9 @@ public class InputManager : MonoBehaviour
 
     private void Punch(InputAction.CallbackContext context)
     {
+        if (!canPunch)
+            return;
+        canPunch = false;
         float punchForce = UnityEngine.Random.Range(minPunchForce, maxPunchForce);
         punch?.Invoke(punchForce);
     }
@@ -38,5 +43,10 @@ public class InputManager : MonoBehaviour
     private void OnDisable()
     {
         _controls.Disable();
+    }
+
+    public void SetCanPunch(bool state)
+    {
+        canPunch = state;
     }
 }
