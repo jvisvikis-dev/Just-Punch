@@ -32,6 +32,12 @@ public class PunchHand : MonoBehaviour
         Enemy enemy = collision.gameObject.transform.root.GetComponent<Enemy>();
         if(enemy)
             enemy.GetPunched(force,1);
+        else
+        {
+            Player player = collision.gameObject.transform.root.GetComponent<Player>();
+            if (player)
+                player.TakeDamage(1);
+        }
         if (!isPlayer)
             return;
         SetCollider(false);
