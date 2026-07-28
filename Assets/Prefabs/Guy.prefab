@@ -1770,7 +1770,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 2.75}
-  m_SizeDelta: {x: 1078, y: 606}
+  m_SizeDelta: {x: 1200, y: 606}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6894658471797512327
 Canvas:
@@ -1790,7 +1790,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -2963,10 +2963,10 @@ RectTransform:
   - {fileID: 2483311805645862135}
   m_Father: {fileID: 5821238867397764872}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: -400}
+  m_SizeDelta: {x: 1200, y: 206}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4130842894345899877
 MonoBehaviour:
@@ -3151,7 +3151,7 @@ HingeJoint:
   m_ConnectedBody: {fileID: 0}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
+  m_Axis: {x: 1, y: 1, z: 1}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   m_UseSpring: 1
@@ -3197,7 +3197,7 @@ MonoBehaviour:
   eyes: {fileID: 8387767705214714350}
   deadEyes: {fileID: 1860949509513357923}
   healthBar: {fileID: 4130842894345899877}
-  damageText: {fileID: 0}
+  damageText: {fileID: 1151600657138347171}
   punchHands: {fileID: 1182777072432889393}
   maxHealth: 10
 --- !u!95 &2171383727479159840

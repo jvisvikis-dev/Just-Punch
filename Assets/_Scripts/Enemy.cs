@@ -47,6 +47,7 @@ public class Enemy : MonoBehaviour
         eyes.SetActive(false);
         deadEyes.SetActive(true);
         joint.breakForce = 0;
+        MatchManager.Instance.MatchOver();
         Destroy(gameObject, 3);
     }
 }

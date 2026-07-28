@@ -6,6 +6,7 @@ public class MatchManager : MonoBehaviour
     private static MatchManager instance;
     public static MatchManager Instance => instance;
     private bool playersTurn = true;
+    private bool gameOver;
     private Enemy enemy;
     private void Awake()
     {
@@ -14,13 +15,10 @@ public class MatchManager : MonoBehaviour
         instance = this; 
     }
 
-    private void Start()
-    {
-        enemy = FindFirstObjectByType<Enemy>();
-    }
-
     public void EndTurn()
     {
+        if (gameOver)
+            return;
         if (playersTurn)
         {
             MatchUIManager.Instance.SetPunchButtonActive(false);
@@ -33,6 +31,18 @@ public class MatchManager : MonoBehaviour
             MatchUIManager.Instance.SetPunchButtonActive(true);
         }
 
+    }
+
+    public void MatchOver()
+    {
+        gameOver = true;
+        MatchUIManager.Instance.SetPunchButtonActive(false);
+        GameManager.Instance.SwitchToExploreScene();
+    }
+
+    public void SetEnemy(Enemy enemy)
+    {
+        this.enemy = enemy;
     }
 
     public IEnumerator DelayEnemyTurn(float delay)
