@@ -21,7 +21,6 @@ public class MatchManager : MonoBehaviour
 
     public void EndTurn()
     {
-        Debug.Log(playersTurn);
         if (playersTurn)
         {
             StartCoroutine(DelayEnemyTurn(2f));

@@ -5,14 +5,10 @@ using UnityEngine.InputSystem;
 public class InputManager : MonoBehaviour
 {
     private static InputManager instance;
-    public static InputManager Instance => instance;
-    [SerializeField] private float minPunchForce;
-    [SerializeField] private float maxPunchForce;
-    public float MinPunchForce => minPunchForce;
-    public float MaxPunchForce => maxPunchForce;    
+    public static InputManager Instance => instance;    
     private Controls _controls;
     private bool canPunch = true;
-    public Action<float> punch;
+    public Action punch;
     
 
     private void Awake()
@@ -31,8 +27,7 @@ public class InputManager : MonoBehaviour
         if (!canPunch)
             return;
         canPunch = false;
-        float punchForce = UnityEngine.Random.Range(minPunchForce, maxPunchForce);
-        punch?.Invoke(punchForce);
+        punch?.Invoke();
     }
 
     private void OnEnable()

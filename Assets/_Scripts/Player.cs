@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -7,10 +8,14 @@ public class Player : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
+        UIManager.Instance.SetPlayerHealthBar(1f);
+        UIManager.Instance.SetPlayerHealthText(currentHealth.ToString());
     }
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        UIManager.Instance.SetPlayerHealthBar((float)currentHealth / maxHealth);
+        UIManager.Instance.SetPlayerHealthText(currentHealth.ToString());
         if (currentHealth < 0)
             Die();
     }

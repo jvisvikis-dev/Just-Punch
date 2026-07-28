@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private GameObject eyes;
     [SerializeField] private GameObject deadEyes;
     [SerializeField] private Slider healthBar;
+    [SerializeField] private PunchHands punchHands;
     [Header("Settings")]
     [SerializeField] private int maxHealth = 10;
     private int currentHealth;
@@ -34,9 +35,7 @@ public class Enemy : MonoBehaviour
 
     public void Punch()
     {
-        if (animator)
-            animator.SetTrigger("Punch");
-        MatchManager.Instance.EndTurn();
+        punchHands.Punch();
     }
 
     private void Die()

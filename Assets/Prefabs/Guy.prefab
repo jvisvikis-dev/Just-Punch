@@ -1017,6 +1017,7 @@ GameObject:
   - component: {fileID: 2507515691195912951}
   - component: {fileID: 6089079538588737458}
   - component: {fileID: 8881917907276593202}
+  - component: {fileID: 1182777072432889393}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -1094,6 +1095,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1182777072432889393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392638991696123122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e2ab7313b095f441ab9102a8ecf2418, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 1
+  animator: {fileID: 2171383727479159840}
+  collider: {fileID: 0}
+  hands:
+  - {fileID: 0}
+  - {fileID: 0}
+  minPunchForce: 500
+  maxPunchForce: 2500
+  maxDamage: 3
 --- !u!1 &1860949509513357923
 GameObject:
   m_ObjectHideFlags: 0
@@ -2972,6 +2994,7 @@ MonoBehaviour:
   eyes: {fileID: 8387767705214714350}
   deadEyes: {fileID: 1860949509513357923}
   healthBar: {fileID: 4130842894345899877}
+  punchHand: {fileID: 0}
   maxHealth: 10
 --- !u!95 &2171383727479159840
 Animator:
