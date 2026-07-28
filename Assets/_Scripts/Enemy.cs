@@ -1,4 +1,4 @@
-using UnityEditor.Experimental.GraphView;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private GameObject eyes;
     [SerializeField] private GameObject deadEyes;
     [SerializeField] private Slider healthBar;
+    [SerializeField] private TextMeshProUGUI damageText;
     [SerializeField] private PunchHands punchHands;
     [Header("Settings")]
     [SerializeField] private int maxHealth = 10;
@@ -28,6 +29,8 @@ public class Enemy : MonoBehaviour
         joint.axis = hingeAxis;
         rb.AddForce(-transform.forward * force);
         currentHealth -= damage;
+        damageText.text = $"-{damage}";
+        animator.SetTrigger("TakeDamage");
         healthBar.value = currentHealth;
         if (currentHealth <= 0)
             Die();

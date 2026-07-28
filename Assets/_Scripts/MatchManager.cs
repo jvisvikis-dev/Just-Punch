@@ -23,13 +23,14 @@ public class MatchManager : MonoBehaviour
     {
         if (playersTurn)
         {
+            MatchUIManager.Instance.SetPunchButtonActive(false);
             StartCoroutine(DelayEnemyTurn(2f));
             playersTurn = false;
         }
         else
         {
             playersTurn = true;
-            InputManager.Instance.SetCanPunch(true);
+            MatchUIManager.Instance.SetPunchButtonActive(true);
         }
 
     }

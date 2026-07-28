@@ -10,7 +10,6 @@ public class PunchHands : MonoBehaviour
     [SerializeField] private float minPunchForce;
     [SerializeField] private float maxPunchForce;
     [SerializeField] private int maxDamage;
-    private InputManager inputManager;
     private float force = 0;
     private bool punched = false;
     private bool fromRight = false;
@@ -20,8 +19,6 @@ public class PunchHands : MonoBehaviour
             hand.Hit += OnHit;
         if (!isPlayer)
             return;
-        inputManager = InputManager.Instance;
-        inputManager.punch += Punch;
     }
 
     public void Punch()
@@ -37,26 +34,6 @@ public class PunchHands : MonoBehaviour
             animator.SetTrigger("Punch");
         punched = true;
     }
-
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    Debug.Log(collision.gameObject.name);
-    //    if (!punched)
-    //        return;
-        
-    //    Enemy enemy = collision.gameObject.transform.root.GetComponent<Enemy>();
-    //    if(enemy)
-    //        enemy.GetPunched(force,(int)(maxDamage*(force/maxPunchForce)));
-    //    else
-    //    {
-    //        Player player = collision.gameObject.transform.root.GetComponent<Player>();
-    //        if (player)
-    //            player.TakeDamage((int)(maxDamage * (force / maxPunchForce)));
-    //    }
-
-    //    SetColliders(false);
-    //    punched = false;
-    //}
 
     private void OnHit(GameObject hitObject)
     {

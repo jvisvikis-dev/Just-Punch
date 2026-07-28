@@ -7,15 +7,17 @@ public class Player : MonoBehaviour
     private int currentHealth;
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         currentHealth = maxHealth;
-        UIManager.Instance.SetPlayerHealthBar(1f);
-        UIManager.Instance.SetPlayerHealthText(currentHealth.ToString());
+        MatchUIManager.Instance.SetPlayerHealthBar(1f);
+        MatchUIManager.Instance.SetPlayerHealthText(currentHealth.ToString());
     }
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        UIManager.Instance.SetPlayerHealthBar((float)currentHealth / maxHealth);
-        UIManager.Instance.SetPlayerHealthText(currentHealth.ToString());
+        MatchUIManager.Instance.SetPlayerHealthBar((float)currentHealth / maxHealth);
+        MatchUIManager.Instance.SetPlayerHealthText(currentHealth.ToString());
         if (currentHealth < 0)
             Die();
     }
