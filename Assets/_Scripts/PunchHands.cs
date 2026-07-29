@@ -55,6 +55,9 @@ public class PunchHands : MonoBehaviour
 
     public void SetColliders(bool state)
     {
+        if(!isPlayer)
+            Debug.Log($"Enemy collider state {state}");
+
         foreach (Collider collider in colliders)
         {
             collider.enabled = state;

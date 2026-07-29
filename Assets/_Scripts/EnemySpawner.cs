@@ -15,6 +15,7 @@ public class EnemySpawner : MonoBehaviour
         bool found = false;
         int idx = 0;
         Enemy prefab = enemyPrefabs[0];
+        Debug.Log(GameManager.Instance.CurrentEnemy);
         while(!found && idx < enemyPrefabs.Count)
         {
             if (enemyPrefabs[idx].name.Contains(GameManager.Instance.CurrentEnemy))
@@ -22,6 +23,7 @@ public class EnemySpawner : MonoBehaviour
                 found = true;
                 prefab = enemyPrefabs[idx];
             }
+            idx++;
         }
         Enemy enemy = Instantiate(prefab,transform.position,transform.rotation);
         enemy.transform.parent = null;

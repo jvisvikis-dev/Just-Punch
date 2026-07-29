@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 459209848462210650}
   - component: {fileID: 3598564641954626047}
   - component: {fileID: 1590997930585394485}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 139844387101527338}
   - component: {fileID: 6677164673415504799}
   - component: {fileID: 495751063065028048}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Granny_head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 3597625122967410505}
   - component: {fileID: 5851131690945860728}
   - component: {fileID: 7122435191791145012}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hand_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,7 +339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3255116814424927817}
   - component: {fileID: 4814315107810388911}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,7 +400,7 @@ GameObject:
   - component: {fileID: 7234205054004875348}
   - component: {fileID: 2254066019619998832}
   - component: {fileID: 1680467341482748542}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hand_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -544,7 +544,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3490510755361280254}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -579,7 +579,7 @@ GameObject:
   - component: {fileID: 8753355706021017920}
   - component: {fileID: 8682857332294400739}
   - component: {fileID: 5004933961209882336}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Granny_head_knockout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,6 +666,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 259190470229218496, guid: 8573ccd8c6ad88746b785b5b24e1ca99, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 276209329908942384, guid: 8573ccd8c6ad88746b785b5b24e1ca99, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 806991304288199427, guid: 8573ccd8c6ad88746b785b5b24e1ca99, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.000000029700713
@@ -726,9 +734,29 @@ PrefabInstance:
       propertyPath: punchHands
       value: 
       objectReference: {fileID: 4814315107810388911}
+    - target: {fileID: 4113960908225824453, guid: 8573ccd8c6ad88746b785b5b24e1ca99, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182787957100503372, guid: 8573ccd8c6ad88746b785b5b24e1ca99, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729376734270938604, guid: 8573ccd8c6ad88746b785b5b24e1ca99, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5536577502676804148, guid: 8573ccd8c6ad88746b785b5b24e1ca99, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7140852872337582000, guid: 8573ccd8c6ad88746b785b5b24e1ca99, type: 3}
       propertyPath: m_Name
       value: Grandma
+      objectReference: {fileID: 0}
+    - target: {fileID: 7140852872337582000, guid: 8573ccd8c6ad88746b785b5b24e1ca99, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
