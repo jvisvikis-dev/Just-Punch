@@ -406,7 +406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32defd636cfcdf640b10a4dbdd9d75da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultEnemyPrefab: {fileID: 4042812883626080068, guid: 8573ccd8c6ad88746b785b5b24e1ca99, type: 3}
+  currentEnemy: 
 --- !u!4 &102700752
 Transform:
   m_ObjectHideFlags: 0
@@ -2270,6 +2270,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9271990a38353954481fd35b001c3550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyPrefabs:
+  - {fileID: 9120915844230510864, guid: 12616d2f1f650c0488c94fa726253f37, type: 3}
 --- !u!1 &1956773781
 GameObject:
   m_ObjectHideFlags: 0

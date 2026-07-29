@@ -4,9 +4,9 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
     public static GameManager Instance => instance;
-    [SerializeField] private Enemy defaultEnemyPrefab;
-    private Enemy currentEnemy;
-    public Enemy CurrentEnemy => currentEnemy;
+    //[SerializeField] private Enemy defaultEnemyPrefab;
+    public string currentEnemy;
+    public string CurrentEnemy => currentEnemy;
 
     private void Awake()
     {
@@ -14,10 +14,9 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         instance = this;
         DontDestroyOnLoad(gameObject);
-        currentEnemy = defaultEnemyPrefab;
     }
 
-    public void SetEnemyPrefab(Enemy enemy)
+    public void SetEnemyName(string enemy)
     {
         currentEnemy = enemy;
     }

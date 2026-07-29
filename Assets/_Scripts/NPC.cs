@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,6 +15,13 @@ public class NPC : Interactable
 
     public void SetupFight()
     {
+        GameManager.Instance.SetEnemyName(enemyPrefab.name);
+        StartCoroutine(GetFightReady());
+    }
+
+    public IEnumerator GetFightReady()
+    {
+        yield return new WaitForSeconds(3f);
         ScenesManager.Instance.SetNextScene(fightSceneName);
         ScenesManager.Instance.LoadScene();
     }

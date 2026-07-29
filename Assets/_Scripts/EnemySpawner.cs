@@ -1,7 +1,10 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    [SerializeField] private List<Enemy> enemyPrefabs;
     private void Start()
     {
         SpawnEnemy();
@@ -9,7 +12,18 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        Enemy enemy = Instantiate(GameManager.Instance.CurrentEnemy,transform.position,transform.rotation);
+        bool found = false;
+        int idx = 0;
+        Enemy prefab = enemyPrefabs[0];
+        while(!found && idx < enemyPrefabs.Count)
+        {
+            if (enemyPrefabs[idx].name.Contains(GameManager.Instance.CurrentEnemy))
+            {
+                found = true;
+                prefab = enemyPrefabs[idx];
+            }
+        }
+        Enemy enemy = Instantiate(prefab,transform.position,transform.rotation);
         enemy.transform.parent = null;
         MatchManager.Instance.SetEnemy(enemy);
     }
