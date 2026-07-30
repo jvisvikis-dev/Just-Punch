@@ -738,6 +738,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9018852506876445114}
     - target: {fileID: 4042812883626080068, guid: 8573ccd8c6ad88746b785b5b24e1ca99, type: 3}
+      propertyPath: enemyName
+      value: Granny
+      objectReference: {fileID: 0}
+    - target: {fileID: 4042812883626080068, guid: 8573ccd8c6ad88746b785b5b24e1ca99, type: 3}
       propertyPath: punchHands
       value: 
       objectReference: {fileID: 4814315107810388911}

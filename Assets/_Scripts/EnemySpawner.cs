@@ -15,7 +15,6 @@ public class EnemySpawner : MonoBehaviour
         bool found = false;
         int idx = 0;
         Enemy prefab = enemyPrefabs[0];
-        Debug.Log(GameManager.Instance.CurrentEnemy);
         while(!found && idx < enemyPrefabs.Count)
         {
             if (enemyPrefabs[idx].name.Contains(GameManager.Instance.CurrentEnemy))

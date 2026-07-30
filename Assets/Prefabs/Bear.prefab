@@ -200,6 +200,10 @@ PrefabInstance:
       propertyPath: name
       value: Bear
       objectReference: {fileID: 0}
+    - target: {fileID: 9120915844230510864, guid: 12616d2f1f650c0488c94fa726253f37, type: 3}
+      propertyPath: enemyName
+      value: Bear
+      objectReference: {fileID: 0}
     - target: {fileID: 9194465744607512721, guid: 12616d2f1f650c0488c94fa726253f37, type: 3}
       propertyPath: m_Layer
       value: 6

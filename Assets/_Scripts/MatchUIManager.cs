@@ -7,6 +7,8 @@ public class MatchUIManager : MonoBehaviour
 {
     private static MatchUIManager instance;
     public static MatchUIManager Instance => instance;
+    [SerializeField] private bool debugMode;
+    public bool DebugMode => debugMode;
     [SerializeField] private Slider playerHealthBar;
     [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private Button punchButton;
@@ -21,6 +23,10 @@ public class MatchUIManager : MonoBehaviour
     private void Start()
     {
         SetPunchButtonActive(true);
+        if (!debugMode)
+        {
+            DisableHealthBar();
+        }
     }
     public void SetPlayerHealthBar(float value)
     {
@@ -35,6 +41,12 @@ public class MatchUIManager : MonoBehaviour
     public void SetPunchButtonActive(bool active)
     {
         punchButton.gameObject.SetActive(active);
+    }
+
+    public void DisableHealthBar()
+    {
+        playerHealthBar.gameObject.SetActive(false);
+        healthText.gameObject.SetActive(false);
     }
 
     public IEnumerator FlashRed(float flashTime)

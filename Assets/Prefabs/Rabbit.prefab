@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: name
       value: Rabbit
       objectReference: {fileID: 0}
+    - target: {fileID: 5883197053656785567, guid: a7fa70410084e6147b6dc24986afa203, type: 3}
+      propertyPath: enemyName
+      value: Rabbit
+      objectReference: {fileID: 0}
     - target: {fileID: 6167449484116929758, guid: a7fa70410084e6147b6dc24986afa203, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 

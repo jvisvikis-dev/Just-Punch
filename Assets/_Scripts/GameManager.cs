@@ -4,9 +4,9 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
     public static GameManager Instance => instance;
-    private string defeatedEnemy;
+    private string defeatedEnemy = "";
     public string DefeatedEnemy => defeatedEnemy;
-    private string currentEnemy;
+    private string currentEnemy = "";
     public string CurrentEnemy => currentEnemy;
 
     private void Awake()

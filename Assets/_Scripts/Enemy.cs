@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private PunchHands punchHands;
     [Header("Settings")]
     [SerializeField] private int maxHealth = 10;
-    [SerializeField] private string name = "Enemy";
+    [SerializeField] private string enemyName = "Enemy";
     private int currentHealth;
     private void Start()
     {
@@ -49,7 +49,7 @@ public class Enemy : MonoBehaviour
         deadEyes.SetActive(true);
         joint.breakForce = 0;
         MatchManager.Instance.MatchOver();
-        GameManager.Instance.DefeatEnemy(name);
+        GameManager.Instance.DefeatEnemy(enemyName);
         Destroy(gameObject, 3);
     }
 }

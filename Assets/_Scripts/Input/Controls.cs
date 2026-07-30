@@ -357,9 +357,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         /// <summary>
         /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
         /// </summary>
-        /// <param name="instance">Callback instance.</param>
+        /// <param enemyName="instance">Callback instance.</param>
         /// <remarks>
-        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// If <paramref enemyName="instance" /> is <c>null</c> or <paramref enemyName="instance"/> have already been added this method does nothing.
         /// </remarks>
         /// <seealso cref="PlayerActions" />
         public void AddCallbacks(IPlayerActions instance)
@@ -384,7 +384,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
         /// </summary>
         /// <remarks>
-        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// Calling this method when <paramref enemyName="instance" /> have not previously been registered has no side-effects.
         /// </remarks>
         /// <seealso cref="PlayerActions" />
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -417,7 +417,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
         /// </summary>
         /// <remarks>
-        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// If <paramref enemyName="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
         /// </remarks>
         /// <seealso cref="PlayerActions.AddCallbacks(IPlayerActions)" />
         /// <seealso cref="PlayerActions.RemoveCallbacks(IPlayerActions)" />
