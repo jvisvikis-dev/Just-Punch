@@ -84,6 +84,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 3810611028758523401, guid: 06c2fb3462555d2478c1c488fcc492ef, type: 3}
+    - target: {fileID: 4814315107810388911, guid: 12616d2f1f650c0488c94fa726253f37, type: 3}
+      propertyPath: maxDamage
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4909536361688393913, guid: 12616d2f1f650c0488c94fa726253f37, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -191,6 +195,10 @@ PrefabInstance:
     - target: {fileID: 9018852506876445114, guid: 12616d2f1f650c0488c94fa726253f37, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120915844230510864, guid: 12616d2f1f650c0488c94fa726253f37, type: 3}
+      propertyPath: name
+      value: Bear
       objectReference: {fileID: 0}
     - target: {fileID: 9194465744607512721, guid: 12616d2f1f650c0488c94fa726253f37, type: 3}
       propertyPath: m_Layer

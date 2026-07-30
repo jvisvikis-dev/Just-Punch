@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[3]'
       value: 
       objectReference: {fileID: -4318571312361772713, guid: dc79282c810df15459da00ce8a163e97, type: 3}
+    - target: {fileID: 5883197053656785567, guid: a7fa70410084e6147b6dc24986afa203, type: 3}
+      propertyPath: name
+      value: Rabbit
+      objectReference: {fileID: 0}
     - target: {fileID: 6167449484116929758, guid: a7fa70410084e6147b6dc24986afa203, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -144,6 +148,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: -2586296408049715105, guid: dc79282c810df15459da00ce8a163e97, type: 3}
+    - target: {fileID: 7925968361942724640, guid: a7fa70410084e6147b6dc24986afa203, type: 3}
+      propertyPath: maxDamage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8330355060986279952, guid: a7fa70410084e6147b6dc24986afa203, type: 3}
       propertyPath: m_Mesh
       value: 

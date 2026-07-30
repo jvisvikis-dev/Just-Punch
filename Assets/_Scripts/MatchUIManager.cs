@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +10,7 @@ public class MatchUIManager : MonoBehaviour
     [SerializeField] private Slider playerHealthBar;
     [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private Button punchButton;
+    [SerializeField] private Image redFlash;
     private void Awake()
     {
         if (!instance)
@@ -33,6 +35,32 @@ public class MatchUIManager : MonoBehaviour
     public void SetPunchButtonActive(bool active)
     {
         punchButton.gameObject.SetActive(active);
+    }
+
+    public IEnumerator FlashRed(float flashTime)
+    {
+        float timer = 0;
+        float fadeTime = flashTime / 2;
+        while(timer <= fadeTime)
+        {
+            timer += Time.deltaTime;
+            float alpha = Mathf.Lerp(0f,1f, timer/fadeTime);
+            Color color = Color.red;
+            color.a = alpha;
+            redFlash.color = color;
+            yield return null;
+        }
+        timer = 0;
+        while (timer <= fadeTime)
+        {
+            timer += Time.deltaTime;
+            float alpha = Mathf.Lerp(0f, 1f, 1 - timer / fadeTime);
+            Color color = Color.red;
+            color.a = alpha;
+            redFlash.color = color;
+            yield return null;
+        }
+
     }
 
 }

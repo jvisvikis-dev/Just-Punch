@@ -4,8 +4,9 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
     public static GameManager Instance => instance;
-    //[SerializeField] private Enemy defaultEnemyPrefab;
-    public string currentEnemy;
+    private string defeatedEnemy;
+    public string DefeatedEnemy => defeatedEnemy;
+    private string currentEnemy;
     public string CurrentEnemy => currentEnemy;
 
     private void Awake()
@@ -28,5 +29,11 @@ public class GameManager : MonoBehaviour
     {
         ScenesManager.Instance.SetNextScene("ExploreScene");
         ScenesManager.Instance.LoadScene();
+    }
+
+    public void DefeatEnemy(string name)
+    {
+        defeatedEnemy = name;
+        SwitchToExploreScene();
     }
 }

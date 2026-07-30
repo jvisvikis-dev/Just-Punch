@@ -383,9 +383,12 @@ MonoBehaviour:
   hands:
   - {fileID: 1680467341482748542}
   - {fileID: 7122435191791145012}
+  punchSounds:
+  - {fileID: 8300000, guid: 72e005f8aefa54f48b4c47885e36a650, type: 3}
+  - {fileID: 8300000, guid: ac2eb9e54f24dda49b785c40457be79d, type: 3}
+  - {fileID: 8300000, guid: 1a2a71ccdb87cdd41abc5dc5a07ccbad, type: 3}
   minPunchForce: 500
-  maxPunchForce: 2500
-  maxDamage: 3
+  maxDamage: 5
 --- !u!1 &5119671111114653132
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,6 +729,10 @@ PrefabInstance:
       propertyPath: eyes
       value: 
       objectReference: {fileID: 1701258200634743765}
+    - target: {fileID: 4042812883626080068, guid: 8573ccd8c6ad88746b785b5b24e1ca99, type: 3}
+      propertyPath: name
+      value: Granny
+      objectReference: {fileID: 0}
     - target: {fileID: 4042812883626080068, guid: 8573ccd8c6ad88746b785b5b24e1ca99, type: 3}
       propertyPath: deadEyes
       value: 

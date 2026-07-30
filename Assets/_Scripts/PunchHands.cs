@@ -7,10 +7,10 @@ public class PunchHands : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Collider [] colliders;
     [SerializeField] private PunchHand[] hands;
+    [SerializeField] private AudioClip[] punchSounds;
     [SerializeField] private float minPunchForce;
-    [SerializeField] private float maxPunchForce;
     [SerializeField] private int maxDamage;
-    private float force = 0;
+    private int damage = 1;
     private bool punched = false;
     private bool fromRight = false;
     private void Start()
@@ -25,7 +25,7 @@ public class PunchHands : MonoBehaviour
     {
         SetColliders(true);
         MatchManager.Instance.EndTurn();
-        force = UnityEngine.Random.Range(minPunchForce, maxPunchForce);
+        damage = UnityEngine.Random.Range(1, maxDamage+1);
         fromRight = UnityEngine.Random.Range(0, 2) == 1;
         string animatorTrigger = fromRight ? "RightPunch" : "LeftPunch";
         if (isPlayer)
@@ -39,15 +39,18 @@ public class PunchHands : MonoBehaviour
     {
         if (!punched)
             return;
+        int idx = UnityEngine.Random.Range(0, punchSounds.Length);
+        AudioManager.Instance.Play3DSound(hitObject.transform.position, punchSounds[idx]);
         Enemy enemy = hitObject.transform.root.GetComponent<Enemy>();
         Player player = hitObject.transform.root.GetComponent<Player>();
         if (isPlayer && enemy)
         {
-            enemy.GetPunched(force, (int)(maxDamage * (force / maxPunchForce)), fromRight);
+            enemy.GetPunched(damage*minPunchForce, damage, fromRight);
         }
         else if(!isPlayer && player)
         {
-            player.TakeDamage((int)(maxDamage * (force / maxPunchForce)));
+            player.TakeDamage(damage);
+            StartCoroutine(MatchUIManager.Instance.FlashRed(.3f));
         }
         SetColliders(false);
         punched = false;
@@ -55,9 +58,6 @@ public class PunchHands : MonoBehaviour
 
     public void SetColliders(bool state)
     {
-        if(!isPlayer)
-            Debug.Log($"Enemy collider state {state}");
-
         foreach (Collider collider in colliders)
         {
             collider.enabled = state;

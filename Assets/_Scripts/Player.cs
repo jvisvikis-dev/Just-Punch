@@ -24,6 +24,6 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
-        Debug.Log("Oh ooo, you don't have anymore health");
+        GameManager.Instance.DefeatEnemy("The player");
     }
 }

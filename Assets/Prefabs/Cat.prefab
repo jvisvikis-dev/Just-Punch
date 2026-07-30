@@ -92,6 +92,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 73d84290876978d41a78e71890c51c26, type: 2}
+    - target: {fileID: 6404226800901930958, guid: 3ea3d54c6f8e76a4bb079fb78649a4df, type: 3}
+      propertyPath: maxDamage
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6870972023580537473, guid: 3ea3d54c6f8e76a4bb079fb78649a4df, type: 3}
       propertyPath: m_Materials.Array.size
       value: 3
@@ -116,6 +120,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 5266411897210666238, guid: b1911f0d0223e4b4cbe56f000ee29340, type: 3}
+    - target: {fileID: 7258536992123219313, guid: 3ea3d54c6f8e76a4bb079fb78649a4df, type: 3}
+      propertyPath: name
+      value: Cat
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

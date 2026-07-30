@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 1102565996882338772, guid: e89a4d178e1263c4ca7302520568e65f, type: 3}
+    - target: {fileID: 4814315107810388911, guid: 12616d2f1f650c0488c94fa726253f37, type: 3}
+      propertyPath: maxDamage
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4909536361688393913, guid: 12616d2f1f650c0488c94fa726253f37, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -136,6 +140,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 1102565996882338772, guid: e89a4d178e1263c4ca7302520568e65f, type: 3}
+    - target: {fileID: 9120915844230510864, guid: 12616d2f1f650c0488c94fa726253f37, type: 3}
+      propertyPath: name
+      value: Frog
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
