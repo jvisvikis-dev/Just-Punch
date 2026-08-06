@@ -8,6 +8,8 @@ public class DefeatedText : MonoBehaviour
     void Start()
     {
         string defeatedEnemy = GameManager.Instance.DefeatedEnemy;
+        if (defeatedEnemy.Equals(""))
+            return;
         text.text = $"{defeatedEnemy} has been defeated!";
     }
 }
